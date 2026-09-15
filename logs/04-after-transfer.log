@@ -1,0 +1,51 @@
+xUDT Scripts Dapp Example  (see xUDT specs)
+Step 1: Issue Custom Token
+
+Private Key:  
+Balance(Total Capacity): 42000000 CKB
+Lock Script:
+{
+  "codeHash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8",
+  "hashType": "type",
+  "args": "0x8e42b1999f265a0078503c4acec4d5e134534297"
+}
+Lock Script Hash: 0x7de82d61a7eb2ec82b0dc653e558ba120efcbfbb44dac87c12972d05bf250653
+
+Token Amount:  
+Issue Token
+Result
+Transaction hash: 0xf4d44bca1c3edbbf177d6e59ce886b0253a93b7898cf26e1d71a9d1eee6a7b6c
+Token xUDT args: 0x7de82d61a7eb2ec82b0dc653e558ba120efcbfbb44dac87c12972d05bf25065300000000 (Noticed that the xUDT args works like the unique id for your issued token, Think of it like an ERC20 contract address)
+Token cell:
+
+Capacity: 146 CKB
+
+Lock: { "codeHash": "0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8", "hashType": "type", "args": "0x8e42b1999f265a0078503c4acec4d5e134534297" }
+
+Type: { "codeHash": "0x1a1e4fef34f5982906f745b048fe7b1089647e82346074e0f32c2ece26cf6b1e", "hashType": "type", "args": "0x7de82d61a7eb2ec82b0dc653e558ba120efcbfbb44dac87c12972d05bf25065300000000" }
+
+Step 2: View Custom Token
+xDUT args:  
+Query Issued Token
+Result: all the cells which hosted this issued token
+
+Cell #0
+
+Token amount: 10
+Token xUDT args: 0x7de82d61a7eb2ec82b0dc653e558ba120efcbfbb44dac87c12972d05bf25065300000000
+Token holder's lock script args: 0x758d311c8483e0602dfad7b69d9053e3f917457d
+
+Cell #1
+
+Token amount: 32
+Token xUDT args: 0x7de82d61a7eb2ec82b0dc653e558ba120efcbfbb44dac87c12972d05bf25065300000000
+Token holder's lock script args: 0x8e42b1999f265a0078503c4acec4d5e134534297
+Step 3: Transfer Custom Token
+Private Key:  
+xUDT args:  
+Transfer Token Amount:  
+Receiver Address:  
+Transfer Custom Token
+Result
+Transaction:
+{"version":"0x0","cellDeps":[{"outPoint":{"txHash":"0x1bb87da347a776a927ab6593e1e10304ca195f8e24279f039008d5e3115b1bf7","index":"0x6"},"depType":"code"},{"outPoint":{"txHash":"0x4d804f1495612631da202fe9902fa9899118554b08138cfe5dfb50e1ede76293","index":"0x0"},"depType":"depGroup"}],"headerDeps":[],"inputs":[{"previousOutput":{"txHash":"0xf4d44bca1c3edbbf177d6e59ce886b0253a93b7898cf26e1d71a9d1eee6a7b6c","index":"0x0"},"since":"0x0","cellOutput":{"capacity":"0x3663a5200","lock":{"codeHash":"0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8","hashType":"type","args":"0x8e42b1999f265a0078503c4acec4d5e134534297"},"type":{"codeHash":"0x1a1e4fef34f5982906f745b048fe7b1089647e82346074e0f32c2ece26cf6b1e","hashType":"type","args":"0x7de82d61a7eb2ec82b0dc653e558ba120efcbfbb44dac87c12972d05bf25065300000000"}},"outputData":"0x2a000000000000000000000000000000"},{"previousOutput":{"txHash":"0xf4d44bca1c3edbbf177d6e59ce886b0253a93b7898cf26e1d71a9d1eee6a7b6c","index":"0x1"},"since":"0x0","cellOutput":{"capacity":"0xeebdd4dd42ba2","lock":{"codeHash":"0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8","hashType":"type","args":"0x8e42b1999f265a0078503c4acec4d5e134534297"}},"outputData":"0x"}],"outputs":[{"capacity":"0x3663a5200","lock":{"codeHash":"0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8","hashType":"type","args":"0x758d311c8483e0602dfad7b69d9053e3f917457d"},"type":{"codeHash":"0x1a1e4fef34f5982906f745b048fe7b1089647e82346074e0f32c2ece26cf6b1e","hashType":"type","args":"0x7de82d61a7eb2ec82b0dc653e558ba120efcbfbb44dac87c12972d05bf25065300000000"}},{"capacity":"0x3663a5200","lock":{"codeHash":"0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8","hashType":"type","args":"0x8e42b1999f265a0078503c4acec4d5e134534297"},"type":{"codeHash":"0x1a1e4fef34f5982906f745b048fe7b1089647e82346074e0f32c2ece26cf6b1e","hashType":"type","args":"0x7de82d61a7eb2ec82b0dc653e558ba120efcbfbb44dac87c12972d05bf25065300000000"}},{"capacity":"0xeebd9e799d642","lock":{"codeHash":"0x9bd7e06f3ecf4be0f2fcd2188b23f1b9fcc88e5d4b65a8637b17723bbda3cce8","hashType":"type","args":"0x8e42b1999f265a0078503c4acec4d5e134534297"}}],"outputsData":["0x0a000000000000000000000000000000","0x20000000000000000000000000000000","0x"],"witnesses":["0x550000001000000055000000550000004100000067644258e5b3a0f0ee538840f61f4aa6f9cc94f60727737398c6afd35b9923f409eae64adf16c9d908353f4f8eea540181a898d2c42cb3fd368e7d36bf97bd4301"]}
