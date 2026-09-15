@@ -11,11 +11,11 @@
 
 | Quest | Requirement | Status | Key Artifact / Tx Hash |
 |---|---|---|---|
-| **Quest 1** | Run OffCKB Devnet & Dapp Example | ✅ Complete | Live at `http://localhost:1234` ([Screenshot 04](screenshots/04-dapp-running.png)) |
-| **Quest 2** | Create a Custom xUDT Token | ✅ Complete | Tx: `0xf4d44bca1c3edbbf177d6e59ce886b0253a93b7898cf26e1d71a9d1eee6a7b6c` ([Screenshot 05](screenshots/05-issue-token.png)) |
-| **Quest 3** | Query Token Cell by Issuer Lock Hash | ✅ Complete | 42 tokens found in Cell #0 ([Screenshot 06](screenshots/06-query-by-lockhash.png)) |
-| **Quest 4** | Transfer Tokens by Replacing Lock Script | ✅ Complete | Tx: `0x6f01edf9c6a47639bd4211ac47c2fc3ff7b663ab08cb467e7e3611536970c06c` ([Screenshot 07](screenshots/07-transfer.png)) |
-| **Post-Check** | Verify Receiver & Change Cells | ✅ Complete | Recipient: 10 tokens / Sender Change: 32 tokens ([Screenshot 08](screenshots/08-after-transfer.png)) |
+| **Quest 1** | Run OffCKB Devnet & Dapp Example | ✅ Complete | Live at `http://localhost:1234` ([Screenshot 04](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/04-dapp-running.png)) |
+| **Quest 2** | Create a Custom xUDT Token | ✅ Complete | Tx: `0xf4d44bca1c3edbbf177d6e59ce886b0253a93b7898cf26e1d71a9d1eee6a7b6c` ([Screenshot 05](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/05-issue-token.png)) |
+| **Quest 3** | Query Token Cell by Issuer Lock Hash | ✅ Complete | 42 tokens found in Cell #0 ([Screenshot 06](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/06-query-by-lockhash.png)) |
+| **Quest 4** | Transfer Tokens by Replacing Lock Script | ✅ Complete | Tx: `0x6f01edf9c6a47639bd4211ac47c2fc3ff7b663ab08cb467e7e3611536970c06c` ([Screenshot 07](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/07-transfer.png)) |
+| **Post-Check** | Verify Receiver & Change Cells | ✅ Complete | Recipient: 10 tokens / Sender Change: 32 tokens ([Screenshot 08](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/08-after-transfer.png)) |
 
 ---
 
@@ -38,7 +38,7 @@ I launched my local standalone CKB node using `offckb node`. It produced blocks 
 PS > offckb --version
 0.4.6
 ```
-![OffCKB Version](screenshots/01-offckb-version.png)
+[![OffCKB Version](https://raw.githubusercontent.com/devfoma/Build_On_CKB_Campaign_05/main/screenshots/01-offckb-version.png)](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/01-offckb-version.png)
 
 ```
 PS > offckb node
@@ -46,7 +46,7 @@ Launching CKB devnet Node...
 CKB devnet RPC Proxy server running on http://127.0.0.1:28114
 Mining block every 2000ms...
 ```
-![OffCKB Node Devnet](screenshots/02-devnet-running.png)
+[![OffCKB Node Devnet](https://raw.githubusercontent.com/devfoma/Build_On_CKB_Campaign_05/main/screenshots/02-devnet-running.png)](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/02-devnet-running.png)
 
 ### The Devnet Accounts I Used
 
@@ -62,7 +62,7 @@ Mining block every 2000ms...
 - **Private Key:** `0x9f315d5a9618a39fdc487c7a67a8581d40b045bd7a42d83648ca80ef3b2cb4a1`
 - **Lock Script Args:** `0x758d311c8483e0602dfad7b69d9053e3f917457d`
 
-![OffCKB Accounts](screenshots/03-accounts.png)
+[![OffCKB Accounts](https://raw.githubusercontent.com/devfoma/Build_On_CKB_Campaign_05/main/screenshots/03-accounts.png)](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/03-accounts.png)
 
 ---
 
@@ -72,7 +72,7 @@ Mining block every 2000ms...
 I installed dependencies and launched the dApp frontend using Parcel configured with `NETWORK=devnet`. The web app connects directly to my local OffCKB devnet proxy and automatically populated Account #0's initial capacity of **42,000,000 CKB**.
 - **URL:** `http://localhost:1234`
 
-![dApp Running](screenshots/04-dapp-running.png)
+[![dApp Running](https://raw.githubusercontent.com/devfoma/Build_On_CKB_Campaign_05/main/screenshots/04-dapp-running.png)](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/04-dapp-running.png)
 
 ---
 
@@ -89,7 +89,7 @@ Using Account #0 as the issuer, I minted 42 units of my custom xUDT token.
 - **Token Cell Capacity:** `146 CKB` (`0x3663a5200` Shannon)
 - **Token Data:** `0x2a000000000000000000000000000000` (42 in u128 little-endian)
 
-![Issue Custom Token](screenshots/05-issue-token.png)
+[![Issue Custom Token](https://raw.githubusercontent.com/devfoma/Build_On_CKB_Campaign_05/main/screenshots/05-issue-token.png)](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/05-issue-token.png)
 
 ---
 
@@ -102,7 +102,7 @@ I copied the generated xUDT args (derived from my Issuer Lock Script Hash) and q
   - **Token Amount:** `42`
   - **Holder Lock Script Args:** `0x8e42b1999f265a0078503c4acec4d5e134534297` (matches my Issuer Account #0)
 
-![Query Token Cell](screenshots/06-query-by-lockhash.png)
+[![Query Token Cell](https://raw.githubusercontent.com/devfoma/Build_On_CKB_Campaign_05/main/screenshots/06-query-by-lockhash.png)](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/06-query-by-lockhash.png)
 
 ---
 
@@ -117,7 +117,7 @@ I initiated a transfer of 10 tokens from Account #0 to Account #1 (`ckt1qzda0cr0
   - **Output 1 (My Change Cell):** 32 tokens, kept locked to Account #0 (`args: 0x8e42b1999f265a0078503c4acec4d5e134534297`), with the same xUDT Type Script.
   - **Output 2 (Capacity Change Cell):** Returned remaining CKB capacity minus the transaction fee.
 
-![Transfer Custom Token](screenshots/07-transfer.png)
+[![Transfer Custom Token](https://raw.githubusercontent.com/devfoma/Build_On_CKB_Campaign_05/main/screenshots/07-transfer.png)](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/07-transfer.png)
 
 ---
 
@@ -127,7 +127,7 @@ I re-queried the xUDT args in Step 2 after the transfer transaction was mined in
 - **Cell #1 (My Change):** Token amount = **32**, Holder = `0x8e42b1999f265a0078503c4acec4d5e134534297`
 - Total supply preserved: 10 + 32 = 42 tokens!
 
-![After Transfer Verification](screenshots/08-after-transfer.png)
+[![After Transfer Verification](https://raw.githubusercontent.com/devfoma/Build_On_CKB_Campaign_05/main/screenshots/08-after-transfer.png)](https://github.com/devfoma/Build_On_CKB_Campaign_05/blob/main/screenshots/08-after-transfer.png)
 
 ---
 
